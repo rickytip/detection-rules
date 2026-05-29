@@ -1,2 +1,21 @@
-# detection-engineering-labs
-A detection engineering portfolio showcasing 60+ Sigma rules developed through SOC Labs challenges. Covers Linux, Windows, and cloud attack techniques including persistence, privilege escalation, and credential access, with MITRE ATT&amp;CK mapping and SIEM-ready detection logic.
+# Detection Engineering Labs
+
+This repository contains Sigma detection rules developed while completing
+SOC detection engineering challenges.
+
+## Skills Demonstrated
+- Sigma rule development
+- Linux & Windows threat detection
+- MITRE ATT&CK mapping
+- Adversary TTP analysis
+- Detection logic tuning
+
+## Platforms Covered
+- Linux (auditd, process execution)
+- Windows (Sysmon)
+- Cloud (AWS IAM)
+
+## Tooling
+- Sigma
+- SOC Labs
+- MITRE ATT&CK
