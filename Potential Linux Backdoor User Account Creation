@@ -1,5 +1,0 @@
-# Description
-In Linux systems, UID (User Identifier) is a unique number that identifies users, with UID 0 typically representing the root user who has complete control over the system. By modifying an ordinary user’s UID to 0, privilege escalation and system persistence can be established. This technique grants a user superuser privileges and may be used to perform malicious operations. Attackers might change a user’s UID to 0 to establish persistence on the system.
-
-## Challenge Objective
-Identify operations in the system that use the usermod command to modify any ordinary user’s UID to 0.
