@@ -1,1 +1,15 @@
-
+title: Potential Linux Backdoor User Account Creation
+description: Identify operations that use usermod to modify an ordinary user's UID to 0.
+status: production
+author: Ricky Tipler
+level: medium
+logsource:
+  product: linux
+  category: process_creation
+detection:
+  selection:
+    Image: /usr/sbin/usermod
+    CommandLine|all:
+      - usermod
+      - "-u 0"
+  condition: selection
