@@ -1,0 +1,17 @@
+## Detection Overview
+Detects persistence via modification of an existing Linux user account to UID 0 using `usermod`.
+
+## Log Source
+- Linux process creation (auditd / Sysmon for Linux)
+
+## Detection Logic
+- Monitors `/usr/sbin/usermod`
+- Requires `-u 0` argument using AND logic to reduce false positives
+
+## False Positives
+- Rare administrative recovery activity
+- Should be reviewed outside change windows
+
+## MITRE ATT&CK
+- Persistence
+- Account Manipulation (T1098)
