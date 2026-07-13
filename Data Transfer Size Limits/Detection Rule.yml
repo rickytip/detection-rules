@@ -1,0 +1,14 @@
+title: Data Transfer Size Limits
+description: Detect the Linux `split` utility being used to divide files into fixed-size chunks for potential data exfiltration.
+status: Production
+author: Rickytip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # detection condition here
+        Image: '/usr/bin/split'
+        CommandLine|contains: '-b'
+    condition: selection
