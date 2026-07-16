@@ -1,0 +1,15 @@
+title: Disable Syslog Service
+description: Rule created to detect the attempt of disabling or stoping Syslog service 
+status: Production
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - 'disable' 
+            - 'stop' 
+    condition: selection
