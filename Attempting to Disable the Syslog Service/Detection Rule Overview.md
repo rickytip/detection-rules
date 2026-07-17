@@ -1,11 +1,10 @@
-Description
+**Description:**
 The Syslog service is a core component for system and application logging, playing a critical role in security monitoring. The log data it collects provides essential evidence for detecting and analyzing security events. However, attackers may attempt to disable or shut down the Syslog service to hide their activities or prevent the system from recording critical behaviors. This action could render security monitoring ineffective, increasing the risk of further system exploitation. Therefore, promptly identifying attempts to disable the Syslog service is a necessary measure to ensure system security and integrity.
 
-Challenge Objective
+**Challenge Objective:**
 Write rules to identify attempts to disable or shut down the Syslog service in Linux systems, considering all possible commands or operations that could be used to deactivate the service.
 
-Data Sample
-Data source: Sysmon, sample data:
+**Data Sample**
 {  "Name": "ParentUser",  
 "Guid": "{ff032593-a8d3-4f13-b0d6-01fc615a0f97}",  
 "EventID": "1",  
@@ -46,4 +45,4 @@ Data source: Sysmon, sample data:
 "ParentUser": "-",  
 "timestamp": "2025-03-20T06:41:17.733850"}
 
-Reference: https://filestore.fortinet.com/docs.fortinet.com/fsiem/Public_Resource_Access/7_5_1/rules/PH_RULE_TH_Linux_disable_syslog.htm
+**Reference:** https://filestore.fortinet.com/docs.fortinet.com/fsiem/Public_Resource_Access/7_5_1/rules/PH_RULE_TH_Linux_disable_syslog.htm
