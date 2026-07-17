@@ -45,3 +45,5 @@ Data source: Sysmon, sample data:
 "ParentCommandLine": "-",  
 "ParentUser": "-",  
 "timestamp": "2025-03-20T06:41:17.733850"}
+
+Reference: https://filestore.fortinet.com/docs.fortinet.com/fsiem/Public_Resource_Access/7_5_1/rules/PH_RULE_TH_Linux_disable_syslog.htm
