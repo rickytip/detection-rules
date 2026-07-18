@@ -1,0 +1,15 @@
+title: Linux Credential file access 
+description: Rule used to identify operations that view /etc/passwd and /etc/shadow files
+status: Production
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - '/etc/passwd'
+            - '/etc/shadow'
+    condition: selection
