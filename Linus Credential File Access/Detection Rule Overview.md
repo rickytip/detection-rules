@@ -46,3 +46,7 @@ Data source: Sysmon, Sample data:
 }
 ## Reference: 
 https://attack.mitre.org/techniques/T1003/008/
+
+## Results 
+<img width="1085" height="727" alt="Screenshot 2026-07-18 at 1 40 49 PM" src="https://github.com/user-attachments/assets/1d2542a4-174d-4cce-a054-e67f4e61e706" />
+
