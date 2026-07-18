@@ -1,0 +1,17 @@
+title: Disable AppArmor
+description: Rule to identify when there is an attempt to disable or shutdown AppArmor
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        CommandLine|contains: 
+            - 'disable apparmor'
+            - 'stop apparmor'
+            - 'apparmor stop'
+            - 'rmmod apparmor'
+            - '-r apparmor'
+    condition: selection
