@@ -1,0 +1,18 @@
+title: Reverse Shell Connection Detection
+description: Rule to identify reverse shell establishment behavior in command lines
+status: Production
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - 'bash'
+            - 'netcat'
+            - 'socat'
+            - 'python'
+            - 'nc'
+    condition: selection
