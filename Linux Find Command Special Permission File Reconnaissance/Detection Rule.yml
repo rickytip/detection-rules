@@ -1,0 +1,15 @@
+title: Find Command Special Permission File Reconnaissance
+description: a rule to identify suspicious find command usage behaviors in the system
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        Image: '/usr/bin/find'
+        CommandLine|contains: 
+            - 'find'
+    condition: selection
