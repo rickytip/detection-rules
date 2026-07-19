@@ -1,0 +1,13 @@
+title: Creating Hidden Files in Linux
+description: Develop a detection rule that identifies the creation of hidden files in Linux environments while avoiding false positives from legitimate system activities.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        TargetFilename: '*/data/.*'
+    condition: selection
