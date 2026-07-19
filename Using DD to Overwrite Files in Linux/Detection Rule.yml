@@ -1,0 +1,14 @@
+title: Using DD to Overwrite Files in Linux
+description: Identify suspicious usage patterns of the DD command in systems
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - 'dd'
+    condition: selection
