@@ -1,0 +1,17 @@
+title: AWK System Function for Executing Shell Commands
+description: Rule to identify the use of the system() function to execute shell commands through AWK commands
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - 'awk'
+            - 'gawk'
+            - 'nawk'
+            - 'mawk'
+    condition: selection
