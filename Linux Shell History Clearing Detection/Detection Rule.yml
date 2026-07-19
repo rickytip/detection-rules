@@ -1,0 +1,15 @@
+title: Linux Shell History Clearing Detection
+description: Develop a rule to identify history clearing behaviors in Linux environments.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        Image: '/usr/bin/rm'
+        CommandLine|contains: 
+            - '*history'
+    condition: selection
