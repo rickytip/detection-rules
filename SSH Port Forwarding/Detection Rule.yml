@@ -1,0 +1,17 @@
+title: SSH Port Forwarding
+description: Identify suspicious SSH tunnels and port forwarding operations.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        Image: '/usr/bin/ssh'
+        CommandLine|contains: 
+            - 'ssh *-d'
+            - 'ssh *-l'
+            - 'ssh *-r'
+    condition: selection
