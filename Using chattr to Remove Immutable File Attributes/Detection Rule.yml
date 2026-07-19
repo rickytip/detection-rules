@@ -1,0 +1,15 @@
+title: Using chattr to Remove Immutable File Attributes
+description: Identify behaviors that use the chattr command to remove file immutable attributes.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - '-i'
+            - 'i-'
+    condition: selection
