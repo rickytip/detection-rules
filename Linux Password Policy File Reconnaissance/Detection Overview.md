@@ -1,12 +1,11 @@
-Description
+## Description
 Password policy configurations in Linux systems are crucial for maintaining system security. These policies are typically defined in specific configuration files such as /etc/login.defs (which defines password expiration times, history records, etc.) and /etc/pam.d/common-password (PAM module configuration). During normal system administration, administrators occasionally need to view these files for configuration adjustments. However, in penetration testing or malicious intrusion scenarios, attackers often examine these files to understand password policy restrictions and develop more precise attack strategies. For example, by understanding password minimum length, complexity requirements, and expiration times, attackers can optimize password guessing strategies or identify accounts likely using weak passwords.
 
-Challenge Objective
+## Challenge Objective
 Create a rule to identify behaviors where common text viewing tools (such as cat, vim, etc.) are used to access Linux password policy configuration files. Files of interest include /etc/login.defs, /etc/pam.d/common-password, and other files containing password policies.
 
-Data Sample
+## Data Sample
 Data source: Sysmon, Sample data:
-
 {
     "Name": "ParentUser", 
     "Guid": "{ff032593-a8d3-4f13-b0d6-01fc615a0f97}", 
@@ -47,7 +46,7 @@ Data source: Sysmon, Sample data:
     "ParentCommandLine": "-", 
     "ParentUser": "-"
     }
-References
+## References
 https://www.atomicredteam.io/docs/atomics/T1201
 https://detection.fyi/sigmahq/sigma/linux/auditd/lnx_auditd_password_policy_discovery/
 
