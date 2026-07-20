@@ -1,0 +1,13 @@
+title: AWS Delete DNS query logs
+description: Detect the deletion of Route 53 DNS resolver query logs in AWS environments.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        eventName: "DeleteResolverQueryLogConfig"
+    condition: selection
