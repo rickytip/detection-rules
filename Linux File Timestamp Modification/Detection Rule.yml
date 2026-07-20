@@ -1,0 +1,16 @@
+title: Linux File Timestamp Modification
+description: Rule to identify suspicious file timestamp modifications in Linux/Unix environments.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        CommandLine|contains: 
+            - '-t'
+            - '-r'
+            - 'touch'
+    condition: selection
