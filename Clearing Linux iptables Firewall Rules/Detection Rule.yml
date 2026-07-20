@@ -1,0 +1,15 @@
+title: Clearing Linux iptables Firewall Rules
+description: Create a detection rule to identify behaviors where iptables commands are used to clear or modify firewall rules to allow all traffic.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        Image: '/usr/sbin/xtables-nft-multi'
+        CommandLine|contains: 
+            - 'iptables -*'
+    condition: selection
