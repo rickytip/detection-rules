@@ -1,0 +1,14 @@
+title: AWS EC2 Windows Instance Password Data Retrieval
+description: Write detection rules to identify password data retrieval activities targeting Windows EC2 instances in an AWS environment
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        eventName: "GetPasswordData"
+        eventSource: "ec2.amazonaws.com"
+    condition: selection
