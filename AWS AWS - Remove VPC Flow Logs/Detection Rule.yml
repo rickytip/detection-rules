@@ -1,0 +1,14 @@
+title: AWS Remove VPC Flow Logs
+description: Detect API calls that delete VPC Flow Log configurations and identify key operational events that may disrupt network traffic monitoring.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: AWS
+    category: CloudTrail
+detection:
+    selection:
+        # edit detection condition here
+         eventName: "DeleteFlowLogs"
+         eventType: "AwsApiCall"
+    condition: selection
