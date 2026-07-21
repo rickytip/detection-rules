@@ -1,0 +1,14 @@
+title: S3 Bucket Lifecycle Policy Set to 1 Day
+description: Detects when an S3 bucket lifecycle expiration policy is configured to delete objects after one day.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection:
+        eventName: PutBucketLifecycle
+        requestParameters.LifecycleConfiguration.Rule.Expiration.Days: 1
+
+    condition: selection
