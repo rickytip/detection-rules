@@ -1,0 +1,14 @@
+title: Stop CloudTrail Trail
+description: Detect events where CloudTrail logging has been stopped.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: AWS
+    category: CloudTrail
+detection:
+    selection:
+        # edit detection condition here
+        eventName: 'StopLogging'
+        eventSource: 'cloudtrail.amazonaws.com'
+    condition: selection
