@@ -1,0 +1,14 @@
+title: Disabling Management Event Logging via Event Selector
+description: Write a detection rule to identify calls to the PutEventSelectors API.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: any
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        eventType: "AwsApiCall"
+        eventName: PutEventSelectors
+    condition: selection
