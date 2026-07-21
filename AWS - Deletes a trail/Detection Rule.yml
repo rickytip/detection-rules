@@ -1,0 +1,14 @@
+title: AWS Deletes a trail
+description: Write detection rules based on logs to identify API calls that delete a Trail.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: AWS
+    category: any
+detection:
+    selection:
+        # edit detection condition here
+        eventType: "AwsApiCall"
+        eventName: "DeleteTrail"
+    condition: selection
