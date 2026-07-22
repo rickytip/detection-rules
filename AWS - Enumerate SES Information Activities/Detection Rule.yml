@@ -1,0 +1,18 @@
+title: Enumerate SES Information Activities
+description: Rule to identify SES enumeration activities,
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: AWS
+    category: CloudTrail
+detection:
+    selection:
+        # edit detection condition here
+        eventSource: "ses.amazonaws.com"
+        eventName|contains: 
+            - "ListIdentities"
+            - "GetAccountSendingEnabled"
+            - "GetSendQuota"
+            - "GetIdentityVerificationAttributes"
+    condition: selection
