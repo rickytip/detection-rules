@@ -1,0 +1,14 @@
+title: Bulk Remote Sessions Across Multiple Instances via SSM StartSession
+description: Write a detection rule to identify bulk SSM StartSession requests targeting multiple EC2 instances within a short timeframe.
+status: experimental
+author: RickyTip
+level: medium
+logsource:
+    product: AWS
+    category: CloudTrail
+detection:
+    selection:
+        # edit detection condition here
+        eventName: "StartSession"
+        eventSource: "ssm.amazonaws.com"
+    condition: selection
