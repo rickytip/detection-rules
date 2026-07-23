@@ -1,0 +1,4 @@
+// Note: Always use the table name `DetectionTable` for your queries.
+DetectionTable
+| where eventSource contains "s3.amazonaws.com"
+| where eventName contains "PutBucketPolicy"
